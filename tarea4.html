@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Estilos</title>
+    <style>
+        h1 {
+            font-size: 24px; 
+            background-color: transparent; 
+        }
+        button {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+        }
+    </style>
+    <script>
+        function cambiarEstilos() {
+            let titulo = document.querySelector("h1");
+            let boton = document.querySelector("button");
+
+            titulo.style.fontSize = "50px";
+            titulo.style.backgroundColor = "yellow";
+            boton.textContent = "Botón pulsado";
+        }
+    </script>
+</head>
+<body style="text-align: center; margin-top: 5%;">
+    <h1>Título Original</h1>
+    <button onclick="cambiarEstilos()">Púlsame</button>
+    <a href="index.html" style=" text-decoration: none;" >Pulsa aqui para volver al índice de la tarea</a>
+</body>
+</html>

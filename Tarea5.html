@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20px;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            width: 200px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        input[type="checkbox"] {
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+        .error {
+            color: red;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: none;
+        }
+        .volver-indice {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function validarFormulario(event) {
+            let usuario = document.getElementById("usuario").value;
+            let checkbox = document.getElementById("condiciones");
+            let errorUsuario = document.getElementById("error-usuario");
+            let errorCheckbox = document.getElementById("error-checkbox");
+
+         
+            errorUsuario.style.display = "none";
+            errorCheckbox.style.display = "none";
+
+           
+            if (usuario.length < 5) {
+                errorUsuario.textContent = "El usuario debe tener al menos 5 caracteres.";
+                errorUsuario.style.display = "block";
+                event.preventDefault(); 
+            }
+
+      
+            if (!checkbox.checked) {
+                errorCheckbox.textContent = "Debes aceptar las condiciones.";
+                errorCheckbox.style.display = "block";
+                event.preventDefault(); 
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    <form onsubmit="validarFormulario(event)">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Introduce tu usuario">
+        <div id="error-usuario" class="error"></div>
+
+        <label>
+            <input type="checkbox" id="condiciones" name="condiciones">
+            He leído y acepto las condiciones
+        </label>
+        <div id="error-checkbox" class="error"></div>
+
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div class="volver-indice">
+        <a href="index.html" style="text-decoration: none;">Pulsa aquí para volver al índice de la tarea</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Múltiplo de 7</title>
+    <script>
+        function esMultiploDe7() {
+            let numero = Number(prompt("Introduce un número:"));
+            if (numero % 7 === 0) {
+                alert(numero + " es múltiplo de 7.");
+            } else {
+                alert(numero + " NO es múltiplo de 7.");
+            }
+        }
+    </script>
+</head>
+<body style="text-align: center; margin-top: 5%;">
+    <h2>Comprobar si es múltiplo de 7</h2>
+    <button onclick="esMultiploDe7()" style="font-size: 1.5rem;">Comprobar</button>
+    <a href="index.html" style=" text-decoration: none;" >Pulsa aqui para volver al índice de la tarea</a>
+</body>
+</html>

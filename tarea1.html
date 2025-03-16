@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Media</title>
+    <script>
+        function calcularMedia() {
+            let num1 = Number(prompt("Introduce el primer número:"));
+            let num2 = Number(prompt("Introduce el segundo número:"));
+            let num3 = Number(prompt("Introduce el tercer número:"));
+            let num4 = Number(prompt("Introduce el cuarto número:"));
+            let media = (num1 + num2 + num3 + num4) / 4;
+            alert("La media de los cuatro números es: " + media);
+        }
+    </script>
+</head>
+<body style="text-align: center; margin-top: 5%;">
+    <h2>Calcular Media de Cuatro Números</h2>
+    <button onclick="calcularMedia()" style="font-size: 1.5rem;">Calcular Media</button>
+    <a href="index.html" style=" text-decoration: none;" >Pulsa aqui para volver al índice de la tarea</a>
+</body>
+</html>
